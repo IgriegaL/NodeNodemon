@@ -18,4 +18,4 @@ routerMatematicas.get("/", (req, res) => {
     res.send(JSON.stringify(resultados));
   });
 
-module.exports.routerMatematicas = routermatematicas;
+module.exports = routermatematicas;

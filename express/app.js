@@ -2,10 +2,13 @@ const express = require("express");
 // Llamar una app de tipo express
 const app = express();
 
-const { infoCursos } = require("./cursos");
+const { infoCursos } = require("./datos/cursos");
 
 // Routers
-app.use('/api/cursos/programacion', routerProgramacion);
+//app.use('/api/cursos/programacion', routerProgramacion);
+
+// Declaramos que el router de matematicas y lo usamos
+const routerMatematicas = require('./routers/matematicas')
 app.use('/api/cursos/matematicas', routerMatematicas);
 
 // Routing
